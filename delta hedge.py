@@ -12,7 +12,7 @@ def bs_call(S, X, T, r, sigma):
 def delta_hedge(S, sigma, strike, T, r, mu, n_steps):
     cash = 0.0
     dt = T/n_steps
-    sp.random.seed(12345)
+    #sp.random.seed(12345)
     delta = 0.0
     call = bs_call(S,strike,T,r,sigma)
     cash -= call['callprice']                               #Firstly, buy a Call option
